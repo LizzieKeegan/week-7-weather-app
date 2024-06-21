@@ -19,6 +19,7 @@ main {
 }
 strong {
   color: rgba(104, 49, 143, 0.779);
+  font-weight: 500;
 }
 .weather-app {
   background-color: #dcd5db;
@@ -39,7 +40,7 @@ strong {
 }
 .weather-app-details {
   font-size: 16px;
-  line-height: 20px;
+  line-height: 25px;
   color: rgba(76, 61, 112, 0.559);
 }
 .weather-app-temp {
