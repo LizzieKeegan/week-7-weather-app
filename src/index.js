@@ -7,9 +7,13 @@ function refreshWeather(response) {
   let windSpeed = document.querySelector("#wind-speed");
   let timeElement = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
+  let weatherIcon = document.querySelector("#weather-app-icon");
+  let iconURL = response.data.condition.icon_url;
+  let iconImage = `<img src="${iconURL}">`;
 
   timeElement.innerHTML = formatDate(date);
   temperatureElement.innerHTML = roundedTemperature;
+  weatherIcon.innerHTML = iconImage;
   cityElement.innerHTML = response.data.city;
   weatherDescription.innerHTML = response.data.condition.description;
   humidityData.innerHTML = response.data.temperature.humidity;
